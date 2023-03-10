@@ -1,36 +1,36 @@
-// const dbJSON =
-//     [
-//     {
-//     "Borough": "Brooklyn",
-//     "Neighborhood": "Central Brooklyn",
-//     "ZipCode": 11216
-//     },
-//     {
-//     "Borough": "Queens",
-//     "Neighborhood": "Northwest Queens",
-//     "ZipCode": 11101
-//     },
-//     {
-//     "Borough": "Manhattan",
-//     "Neighborhood": "Chelsea and Clinton",
-//     "ZipCode": 10001
-//     },
-//     {
-//     "Borough": "Staten Island",
-//     "Neighborhood": "South Shore",
-//     "ZipCode": 10312
-//     },
-//     {
-//     "Borough": "Bronx",
-//     "Neighborhood": "Hunts Point and Mott Haven",
-//     "ZipCode": 10455
-//     },
-//     {
-//     "Borough": "Manhattan",
-//     "Neighborhood": "Inwood and Washington Heights",
-//     "ZipCode": 10040
-//     }
-// ]
+const dbJSON =
+    [
+    {
+    "Borough": "Brooklyn",
+    "Neighborhood": "Central Brooklyn",
+    "ZipCode": 11216
+    },
+    {
+    "Borough": "Queens",
+    "Neighborhood": "Northwest Queens",
+    "ZipCode": 11101
+    },
+    {
+    "Borough": "Manhattan",
+    "Neighborhood": "Chelsea and Clinton",
+    "ZipCode": 10001
+    },
+    {
+    "Borough": "Staten Island",
+    "Neighborhood": "South Shore",
+    "ZipCode": 10312
+    },
+    {
+    "Borough": "Bronx",
+    "Neighborhood": "Hunts Point and Mott Haven",
+    "ZipCode": 10455
+    },
+    {
+    "Borough": "Manhattan",
+    "Neighborhood": "Inwood and Washington Heights",
+    "ZipCode": 10040
+    }
+]
 
 
 // // console.log(dbJSON)
