@@ -53,3 +53,8 @@ const result2 = dbJSON.filter(obj =>{
 console.log(result)
 console.log(result2)
 console.log(dbJSON)
+
+
+// i can write how map, filter, for each works with elements and how the VALUE gets passed
+
+// but when using json data, how objects and nested arrays get passed by REFERENCE
