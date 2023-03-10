@@ -43,6 +43,12 @@ const result = dbJSON.map(obj =>{
 
 // console.log(result)
 
+for (element of dbJSON){
+    element.Borough = 'no where'
+    console.log(element)
+
+}
+
 const result2 = dbJSON.filter(obj =>{
     if (obj.Borough === 'Manhattan'){
         obj.ZipCode = 00000
