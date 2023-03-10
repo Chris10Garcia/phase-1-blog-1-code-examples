@@ -58,3 +58,11 @@ console.log(dbJSON)
 // i can write how map, filter, for each works with elements and how the VALUE gets passed
 
 // but when using json data, how objects and nested arrays get passed by REFERENCE
+
+
+/* 
+LOOK INTO THIS!
+https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language?page=1&tab=scoredesc#tab-top
+https://flexiple.com/javascript/javascript-pass-by-reference-or-value/
+https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference
+*/
