@@ -16,7 +16,7 @@ purpose: when working with JSON data and using map, filter, forEach, and other i
 
 - array.map()
 
-what map does, it takes the elements within the array it was called on, does something to each one, and returns the processed elements in a new array
+what map does, it takes the elements within the array it was called on, does something to each one with a function you provide, and returns the processed elements in a new array. The original array stays the same
 
 `const result = myArray.map(element => {
     return element * 2
@@ -24,4 +24,95 @@ what map does, it takes the elements within the array it was called on, does som
 
 console.log(result)
 // [0, 2, 4, 6, 8, 10]
+
+console.log(myArray)
+// [0, 1, 2, 3, 4, 5]
 `
+
+- array.filter()
+
+what filter does, it takes the elements within the array it was called on, and runs each element through some condotional statement or function, and if it returns true, places the original element into a new array
+
+`const result = myArray.map(element => {
+    element = element * 2
+    return element > 3
+})
+
+console.log(result)
+// [2, 3, 4, 5]
+`
+Notice that even though each element was doubled, the original value of the element was pass into the array. This is important
+
+- array.forEach() and for (element of array){}
+
+both conceptually work the same: it takes the elements within the array, and does something to each one with a function you provide. It might sound the same as .map except forEach and for (x of y) doesn't return the element or processed element (unless you declare a variable, array, etc outside of the function and assign it to it)
+
+`
+forEach and for (of) examples
+`
+
+now what does this have to do with pass by value vs pass by reference
+
+myArray was an array of integers, and integers are primative values. When you call a function with a primative value, a copy of the value gets passed into the function. You can change the value of the variable within the function but it doesn't change the variable outside of the function
+
+` function double (x) {
+    x = x * 2
+    return x;
+}
+
+let y = 100; 
+let result = double(y)
+
+console.log(y) // 100
+console.log(result) // 200
+
+Now, when working with JSON data, you have an array of OBJECTS, key distinction here. Objects are passed by reference in javascript. What this means is Javascript passes the direct location / address in memory where the object is located into the function. If you change the property within the function, it persists outside of the function
+
+` function doubleProperty(obj){
+    obj.value = obj.value * 2
+    return obj // 
+}
+
+const myObj = {value : 10}
+console.log(myObj)
+
+const result = doubleProperty(myObj)
+
+console.log(result)
+console.log(myObj)
+
+{ value: 10 }
+{ value: 20 }
+{ value: 20 }
+`
+
+Furthermore you can remove the `return` statement and the results are still the same
+
+
+And this needs to be taken into account when calling on iterative methods such as map, filter, and forEach on JSON data!
+
+Here is an example. Lets say you have json data of the following structure {studentName, favoriteColor, favoriteNumber}.
+
+if you want to double each student's favorite number and store it in a new json array, you would assume the following code
+
+` 
+const studentsArray = [{
+    "studentName" : "Chris",
+    "favoriteColor" : "blue",
+    "favoriteNumber" : "15" 
+    },
+    {
+    "studentName" : "Rose",
+    "favoriteColor" : "blue",
+    "favoriteNumber" : "36" 
+    }]
+
+
+const results = studentsArray.map(studentObj => {
+
+    
+})
+
+
+`
+
